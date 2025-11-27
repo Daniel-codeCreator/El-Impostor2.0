@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impostor 😈</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Simulador de Impostor</h1>
+
+<div id="nombresContainer" style="margin-top:15px; display:none;">
+  <h3>Ingresa los nombres:</h3>
+  <div id="inputsNombres"></div>
+  <button onclick="confirmarNombres()">Confirmar nombres</button>
+</div>
+
+
+<div>
+  <label for="numPlayers">Cantidad de jugadores:</label>
+  <input type="number" id="numPlayers" min="3" max="20">
+  <button onclick="iniciarRonda()">Iniciar ronda</button>
+</div>
+
+<p id="rondaInfo" style="margin-top:20px;"></p>
+
+<div id="cardContainer">
+  <div class="card" id="card" style="display:none;">Jugador</div>
+</div>
+
+<button id="nextBtn" onclick="siguienteJugador()" style="display:none;">Siguiente jugador</button>
+
+<div id="timerSection" style="display:none; margin-top:20px;">
+  <p>Tiempo restante: <span id="timer">03:00</span></p>
+  <button onclick="togglePause()"><span id="pauseBtnText">Pausar</span></button>
+</div>
+
+<div id="playersList" style="display:none; margin-top:20px;">
+  <p>Selecciona un jugador para eliminar</p>
+</div>
+<button id="eliminarBtn" style="display:none;" onclick="eliminarJugador()">Eliminar seleccionado</button>
+
+<div id="startModal" class="modal">
+  <div class="modal-content">
+    <h2 id="startModalText">Seleccionando jugador...</h2>
+    <button onclick="cerrarStartModal()">Continuar</button>
+  </div>
+</div>
+
+
+<!-- Modal final -->
+<div id="endModal" class="modal">
+  <div class="modal-content">
+    <h2 id="modalText">¡Resultado!</h2>
+    <button onclick="reiniciarJuego()">Reiniciar</button>
+  </div>
+</div>
+
+<script src="LogicaJS/Logica.js"></script>
+
+</body>
+</html>  

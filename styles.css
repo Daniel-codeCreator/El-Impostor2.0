@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+input, button, select {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+}
+.card {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 40px;
+  width: 250px;
+  height: 150px;
+  background-color: #333;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+}
+.revealed {
+  background-color: #555;
+}
+#playersList button {
+  margin: 5px;
+  padding: 5px 10px;
+}
+.selected {
+  background-color: red !important;
+}
+
+#inputsNombres {
+    display: grid;
+    align-items: baseline;
+    align-items: center;
+    align-content: stretch;
+    justify-content: center;
+}
+
+/* Modal */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+  background-color: #222;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  color: #fff;
+  border-radius: 10px;
+}
+.modal-content button {
+  margin-top: 20px;
+}
+
+.modalRuleta {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ruleta-box {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 350px;
+}
+
+.ruletaContainer {
+  margin: 20px auto;
+}
+
+.modal {
+  display: none;
+  color: black;
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+  place-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
